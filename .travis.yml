@@ -1,6 +1,7 @@
 dist: bionic
-#dist: xenial
 sudo: false
+cache:
+    pip: true
 
 language: python
 python:
