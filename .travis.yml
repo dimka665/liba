@@ -1,10 +1,12 @@
 dist: bionic
+sudo: false
 
 language: python
 python:
     - 3.6
 
 install:
+    - pwd
     - python3 -m pip install tox
 
 script:
