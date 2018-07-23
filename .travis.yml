@@ -7,8 +7,8 @@ python:
 
 install:
     - pwd
-    - tox --showconfig
     - python3 -m pip install tox
+    - tox --showconfig
 
 script:
     - tox
