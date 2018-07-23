@@ -26,4 +26,4 @@ test = "pytest --flake8"
 # sphinx-build -b builder -d source/doctrees source build/builder
 docs = "sphinx-autobuild --open-browser --port 0 --delay 1 -d docs/_build/doctrees docs docs/_build/html"
 doctest = "sphinx-build -b doctest -d docs/_build/doctrees docs docs/_build/doctest"
-build-docs = "sphinx-build -b html -d docs/_build/doctrees -W docs docs/_build/html"
+build-docs = "sphinx-build -b html -d docs/_build/doctrees docs docs/_build/html"
