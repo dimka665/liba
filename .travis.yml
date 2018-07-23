@@ -9,10 +9,9 @@ python:
 
 install:
     - python3 -m pip install tox
-    - tox --showconfig
 
-env:
-    - PYTHONPATH=.
+#env:
+#    - PYTHONPATH=.
 
 script:
-    - tox
+    - PYTHONPATH=. tox
