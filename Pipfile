@@ -14,6 +14,7 @@ mypy = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
 bumpr = "*"
+pytest-pythonpath = "*"
 
 [requires]
 python_version = "3.6"

@@ -10,8 +10,5 @@ python:
 install:
     - python3 -m pip install tox
 
-env:
-    - PYTHONPATH=.
-
 script:
     - tox
