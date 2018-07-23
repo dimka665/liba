@@ -3,11 +3,11 @@ dist: xenial
 sudo: false
 
 language: python
-#python: "3.6"
-python: "3.5"
+python: "3.6"
+#python: "3.5"
 
 install:
-    - python3 -m pip install tox
+    - python3.5 -m pip install tox
     - tox --showconfig
 
 script:
