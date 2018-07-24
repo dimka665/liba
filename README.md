@@ -1,9 +1,9 @@
 liba
 =============================
 
-[![Latest version on PyPI](https://img.shields.io/pypi/pyversions/awesome-slugify.svg)](https://pypi.python.org/pypi/awesome-slugify)
-[![Travis](https://travis-ci.org/dimka665/awesome-slugify.svg?branch=master)](https://travis-ci.org/dimka665/asesome-slugify)
-[![Read the docs](https://readthedocs.org/projects/vk/badge/?version=stable)](https://vk.readthedocs.io/en/latest/)
+[![PyPI](https://img.shields.io/pypi/pyversions/awesome-slugify.svg)](https://pypi.python.org/pypi/awesome-slugify "Latest version on PyPI")
+[![Travis](https://travis-ci.org/dimka665/awesome-slugify.svg?branch=master)](https://travis-ci.org/dimka665/awesome-slugify "Travis CI")
+[![Docs](https://readthedocs.org/projects/vk/badge/?version=stable)](https://vk.readthedocs.io/en/latest/ "Read the docs")
 
 Project description
 
