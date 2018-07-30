@@ -1,9 +1,9 @@
 liba
 =============================
 
-[![PyPI](https://img.shields.io/pypi/pyversions/awesome-slugify.svg)](https://pypi.python.org/pypi/awesome-slugify "Latest version on PyPI")
-[![Travis](https://travis-ci.org/dimka665/awesome-slugify.svg?branch=master)](https://travis-ci.org/dimka665/awesome-slugify "Travis CI")
-[![Docs](https://readthedocs.org/projects/vk/badge/?version=stable)](https://vk.readthedocs.io/en/latest/ "Read the docs")
+[![PyPI](https://img.shields.io/pypi/pyversions/{{ cookiecutter.project-name }}.svg)](https://pypi.org/pypi/{{ cookiecutter.project_name }} "Latest version on PyPI")
+[![Travis](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}.svg?branch=master)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }} "Travis")
+[![Docs](https://readthedocs.org/projects/{{ cookiecutter.project_name }}/badge/?version=stable)](https://{{ cookiecutter.project_name }}.readthedocs.io/en/latest/ "Read the docs")
 
 Project description
 
