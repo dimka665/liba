@@ -9,7 +9,20 @@ python:
     - "3.6"
 
 install:
-    - python3 -m pip install tox tox-travis
+    - python3 -m pip install pipenv
+    - pipenv install --dev --skip-lock
 
 script:
-    - tox
+    - pipenv run test
+
+#deploy:
+#    - python --version
+
+jobs:
+  include:
+    - stage: Codecov
+      script: codecov
+#    - # stage name not required, will continue to use `test`
+#      script: ./test 2
+#    - stage: deploy
+#      script: ./deploy
