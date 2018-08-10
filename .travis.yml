@@ -17,40 +17,26 @@ install:
 script:
     - pipenv run test
 
-#matrix:
-#    include:
-##        - python: "3.5"
-##          install:
-##              - python3 -m pip install pipenv
-##              - pipenv install --dev --skip-lock
-##          script:
-##              - pipenv run test
-#
-##        - python: "3.6"
-##          install:
-##              - python3 -m pip install pipenv
-##              - pipenv install --dev --skip-lock
-##          script:
-##              - pipenv run test
-#
-#        - name: Docs
-#          python: "3.5"
-#          install:
-#              - python3 -m pip install pipenv sphinx
-#              - pipenv install --skip-lock
-#          script:
-#              - pipenv run doctest
-
-jobs:
+matrix:
     include:
-        - stage: Test
-          name: Docs
+        - name: Docs
           python: "3.5"
           install:
               - python3 -m pip install pipenv sphinx
               - pipenv install --skip-lock
           script:
               - pipenv run doctest
+
+jobs:
+    include:
+#        - stage: Test
+#          name: Docs
+#          python: "3.5"
+#          install:
+#              - python3 -m pip install pipenv sphinx
+#              - pipenv install --skip-lock
+#          script:
+#              - pipenv run doctest
 
         - stage: Codecov
           install: pip install codecov
