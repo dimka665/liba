@@ -25,6 +25,7 @@ matrix:
 #              - pipenv run test
 
         - python: "3.5"
+          name: Soma
 #          env: BuildDocs=Yes
           install:
               - python3 -m pip install pipenv sphinx
