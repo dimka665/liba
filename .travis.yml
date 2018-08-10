@@ -25,7 +25,7 @@ matrix:
 #              - pipenv run test
 
         - python: "3.5"
-          name: Soma
+          name: Docs
 #          env: BuildDocs=Yes
           install:
               - python3 -m pip install pipenv sphinx
@@ -40,8 +40,8 @@ install:
 script:
     - pipenv run test
 
-#jobs:
-#    include:
+jobs:
+    include:
 #        - stage: Docs
 #          install:
 #              - python3 -m pip install pipenv sphinx
@@ -49,10 +49,10 @@ script:
 #          script:
 #              - pipenv run doctest
 #
-#        - stage: Codecov
-#          install: pip install codecov
-#          script: codecov
-#    #    - # stage name not required, will continue to use `test`
-#    #      script: ./test 2
-#    #    - stage: deploy
-#    #      script: ./deploy
+        - stage: Codecov
+          install: pip install codecov
+          script: codecov
+    #    - # stage name not required, will continue to use `test`
+    #      script: ./test 2
+    #    - stage: deploy
+    #      script: ./deploy
