@@ -7,13 +7,13 @@ language: python
 #python:
 #    - "3.5"
 #    - "3.6"
-
-install:
-    - python3 -m pip install pipenv
-    - pipenv install --dev --skip-lock
-
-script:
-    - pipenv run test
+#
+#install:
+#    - python3 -m pip install pipenv
+#    - pipenv install --dev --skip-lock
+#
+#script:
+#    - pipenv run test
 
 #deploy:
 #    - python --version
