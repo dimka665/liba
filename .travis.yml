@@ -25,12 +25,12 @@ matrix:
 #              - pipenv run test
 
         - python: "3.5"
-          env: BuildDocs=Yes
-#          install:
-#              - python3 -m pip install pipenv sphinx
-#              - pipenv install --skip-lock
-#          script:
-#              - pipenv run doctest
+#          env: BuildDocs=Yes
+          install:
+              - python3 -m pip install pipenv sphinx
+              - pipenv install --skip-lock
+          script:
+              - pipenv run doctest
 
 install:
     - python3 -m pip install pipenv
