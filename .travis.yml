@@ -8,6 +8,13 @@ python:
     - "3.5"
     - "3.6"
 
+install:
+    - python3 -m pip install pipenv
+    - pipenv install --dev --skip-lock
+
+script:
+    - pipenv run test
+
 matrix:
     include:
 #        - python: "3.5"
@@ -32,30 +39,25 @@ matrix:
           script:
               - pipenv run doctest
 
-install:
-    - python3 -m pip install pipenv
-    - pipenv install --dev --skip-lock
 
-script:
-    - pipenv run test
 
-jobs:
-    include:
-#        - stage: Docs
-#          install:
-#              - python3 -m pip install pipenv sphinx
-#              - pipenv install --skip-lock
-#          script:
-#              - pipenv run doctest
-#
-        - stage: Codecov
-          install: pip install codecov
-          script: codecov
-    #    - # stage name not required, will continue to use `test`
-    #      script: ./test 2
-    #    - stage: deploy
-    #      script: ./deploy
+#jobs:
+#    include:
+##        - stage: Docs
+##          install:
+##              - python3 -m pip install pipenv sphinx
+##              - pipenv install --skip-lock
+##          script:
+##              - pipenv run doctest
+##
+#        - stage: Codecov
+#          install: pip install codecov
+#          script: codecov
+#    #    - # stage name not required, will continue to use `test`
+#    #      script: ./test 2
+#    #    - stage: deploy
+#    #      script: ./deploy
 
-stages:
-    - test
-    - Codecov
+#stages:
+#    - Test
+#    - Codecov
