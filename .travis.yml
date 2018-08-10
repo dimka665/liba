@@ -8,13 +8,6 @@ python:
     - "3.5"
     - "3.6"
 
-install:
-    - python3 -m pip install pipenv
-    - pipenv install --dev --skip-lock
-
-script:
-    - pipenv run test
-
 matrix:
     include:
 #        - python: "3.5"
@@ -37,6 +30,13 @@ matrix:
               - pipenv install --skip-lock
           script:
               - pipenv run doctest
+
+install:
+    - python3 -m pip install pipenv
+    - pipenv install --dev --skip-lock
+
+script:
+    - pipenv run test
 
 jobs:
     include:
