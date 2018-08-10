@@ -4,9 +4,9 @@ cache:
     pip: true
 
 language: python
-python:
-    - "3.5"
-    - "3.6"
+#python:
+#    - "3.5"
+#    - "3.6"
 
 install:
     - python3 -m pip install pipenv
@@ -19,6 +19,20 @@ script:
 #    - python --version
 matrix:
     include:
+        - python: "3.5"
+          install:
+              - python3 -m pip install pipenv
+              - pipenv install --dev --skip-lock
+          script:
+              - pipenv run test
+
+        - python: "3.6"
+          install:
+              - python3 -m pip install pipenv
+              - pipenv install --dev --skip-lock
+          script:
+              - pipenv run test
+
         - python: "3.5"
           install:
               - python3 -m pip install pipenv sphinx
