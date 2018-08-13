@@ -21,7 +21,7 @@ jobs:
     include:
         - stage: Test
           name: Docs
-          python: "3.5"
+#          python: "3.5"
           install:
               - pip install pipenv sphinx
               - pipenv install --skip-lock
@@ -30,11 +30,13 @@ jobs:
               - pipenv run build-docs
 
         - stage: Codecov
+#          name: Codecov
+#          python: "3.5"
 #          install:
 #              - pip install pipenv codecov
 #              - pipenv install --dev --skip-lock
-#          script:
-#              - pipenv run test
-          after_success:
+          after_install:
               - pip install codecov
+          script:
+              - pytest --cov
               - codecov
