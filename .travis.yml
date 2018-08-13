@@ -20,7 +20,7 @@ script:
 jobs:
     include:
         - stage: Test
-          name: Docs
+          name: Test docs
 #          python: "3.5"
           install:
               - pip install pipenv sphinx
@@ -29,8 +29,8 @@ jobs:
               - pipenv run doctest
               - pipenv run build-docs
 
-        - stage: Codecov
-          name: Codecov
+        - stage: Test coverage
+          name: сodecov
 #          python: "3.5"
 #          install:
 #              - pip install pipenv codecov
