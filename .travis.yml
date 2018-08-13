@@ -7,6 +7,7 @@ cache:
 
 language: python
 python:
+    # First value is default
     - "3.5"
     - "3.6"
 
@@ -21,7 +22,6 @@ jobs:
     include:
         - stage: Test
           name: Test docs
-#          python: "3.5"
           install:
               - pip install pipenv sphinx
               - pipenv install --skip-lock
@@ -31,10 +31,6 @@ jobs:
 
         - stage: Coverage
           name: сodecov
-#          python: "3.5"
-#          install:
-#              - pip install pipenv codecov
-#              - pipenv install --dev --skip-lock
           before_script:
               - pip install codecov
           script:

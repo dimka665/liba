@@ -4,23 +4,27 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+requests = "*"
 
 [dev-packages]
 ipython = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-flake8 = "*"
+pytest-pythonpath = "*"
 mypy = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
 bumpr = "*"
-pytest-pythonpath = "*"
+codecov = "*"
 
 [requires]
 python_version = "3.6"
 
 [scripts]
 test = "pytest --flake8"
+fulltest = "pytest --flake8 --cov --no-cov-on-fail vk tests docs/conf.py"
+covtest = "pytest --cov --no-cov-on-fail tests"
 # We use equivalent of "make mode":
 # sphinx-build -M builder source build  =>
 # sphinx-build -b builder -d source/doctrees source build/builder
